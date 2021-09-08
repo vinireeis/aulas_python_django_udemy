@@ -1,4 +1,4 @@
-print('Hello, World!')
+'''print('Hello, World!')
 print('-' * 40)
 # separador > print('Vinicius', 'Reis', sep='/')
 # remover quebra de linha > print('Vinicius', end='')
@@ -41,3 +41,48 @@ if n1.isdigit() and n2.isdigit():
           ' para inteiros e somados, tendo como resultado', n1 + n2)
 else:
     print('Não pude converter os valores informados')
+print('-' * 40)
+print('Formatando valores com modificadores - aula 5')
+# s - string, d - inteiro, f - float
+# .2f  > quantidade de caracteres decimais depois da virgula/ponto.
+# (CARACTERE)(> ou < ou ^)(QUANTIDADE)(TIPO) exemplos abaixo
+# maior > - coloca a esquerda
+# menor < - coloca a direita
+# ^ - Centro
+
+n1 = 1
+n2 = 1150
+n3 = 249.3950128
+print(f'{n1:0>10}') # > siginifica que colocará os zeros até completar dez digitos.
+print('-' * 40)
+print(f'{n2:0^8}') # centro
+print('-' * 40)
+print(f'{n3:.2f}') # float
+print('-' * 40)
+print(f'{n2:0>10.2f}') # colocando valores e decimais.
+print('-' * 40)
+nome = 'Vinicius Reis'
+print(f'{nome:#^50}')
+# n1.ljust(20, #) mesma coisa que :{n1:#<20}
+print('-' * 40)
+print('Aula 6 - manipulando strings')
+# +[0123456789]
+# -[987654321]
+n ='Python <3'
+print(n[-5]) ## posição -5 da string
+# fatiamento n[0:6] vai imprimir do 0 até a posição 5
+print(n[0:6])
+# fatiamento pulando caracteres
+print(n[0:8:3]) # primeiro valor é o inicio, segundo é o fim, terceiro é de quantos em quantos irá pular.
+print('-' * 40)
+'''
+frase = 'O rato roeu a roupa do rei de roma'
+tm_frase = len(frase)
+contador = 0
+
+while contador <= tm_frase:
+    print(frase[contador], contador)
+    nova_frase += frase[contador]
+    contador += 1
+print(nova_frase)
+
