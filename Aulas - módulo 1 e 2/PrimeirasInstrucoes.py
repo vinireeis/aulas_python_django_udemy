@@ -1,4 +1,4 @@
-'''print('Hello, World!')
+print('Hello, World!')
 print('-' * 40)
 # separador > print('Vinicius', 'Reis', sep='/')
 # remover quebra de linha > print('Vinicius', end='')
@@ -75,12 +75,13 @@ print(n[0:6])
 # fatiamento pulando caracteres
 print(n[0:8:3]) # primeiro valor é o inicio, segundo é o fim, terceiro é de quantos em quantos irá pular.
 print('-' * 40)
-'''
+
 frase = 'O rato roeu a roupa do rei de roma'
 tm_frase = len(frase)
 contador = 0
+nova_frase = ''
 
-while contador <= tm_frase:
+while contador < tm_frase:
     print(frase[contador], contador)
     nova_frase += frase[contador]
     contador += 1
