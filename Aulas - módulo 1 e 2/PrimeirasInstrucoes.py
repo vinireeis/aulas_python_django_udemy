@@ -90,3 +90,24 @@ print(nova_frase)
 # for x in range(20, 10, -1)  20 = número que começa, 10 - 1 número que termina , -1 vai subtrair -1 em cada passagem do loop
 for x in range(20, 10-1, -1):
     print(x)
+print('-' * 40)
+#trocando valores
+
+x = 10
+y = 'Vinicius'
+z = 15.87
+x, y , z = z, x, y
+print(x, y, z)
+print('-' * 40)
+
+# podemos usar o OR ou AND dentro do print
+nome = input('Qual seu nome?')
+print(nome or 'Você não digitou nada')
+print('-' * 40)
+# usando if/else dentro da variável
+idade = input('Informe a sua idade: ')
+if not idade.isnumeric():
+    print('Você precisa digitar apenas números')
+de_maior = (int(idade) >= 18)
+msg = 'Pode acessar' if de_maior else 'Não pode acessar'
+print(msg)
