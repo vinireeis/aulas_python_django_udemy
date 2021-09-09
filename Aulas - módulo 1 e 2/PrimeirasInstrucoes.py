@@ -87,3 +87,6 @@ while contador < tm_frase:
     contador += 1
 print(nova_frase)
 
+# for x in range(20, 10, -1)  20 = número que começa, 10 - 1 número que termina , -1 vai subtrair -1 em cada passagem do loop
+for x in range(20, 10-1, -1):
+    print(x)
