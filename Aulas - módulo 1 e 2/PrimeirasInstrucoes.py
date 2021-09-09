@@ -29,7 +29,7 @@ else:
     print('Seis')
 
 # validar se é um número, inteiro e positivo > isnumeric()
-#validar se é um 'digito', inteiro e positivo > isdigit()
+# validar se é um 'digito', inteiro e positivo > isdigit()
 
 n1 = input('Digite um número: ')
 n2 = input('Digite um número: ')
@@ -53,13 +53,14 @@ print('Formatando valores com modificadores - aula 5')
 n1 = 1
 n2 = 1150
 n3 = 249.3950128
-print(f'{n1:0>10}') # > siginifica que colocará os zeros até completar dez digitos.
+# > significa que colocará os zeros até completar dez digitos.
+print(f'{n1:0>10}')
 print('-' * 40)
-print(f'{n2:0^8}') # centro
+print(f'{n2:0^8}')  # centro
 print('-' * 40)
-print(f'{n3:.2f}') # float
+print(f'{n3:.2f}')  # float
 print('-' * 40)
-print(f'{n2:0>10.2f}') # colocando valores e decimais.
+print(f'{n2:0>10.2f}')  # colocando valores e decimais.
 print('-' * 40)
 nome = 'Vinicius Reis'
 print(f'{nome:#^50}')
@@ -68,12 +69,13 @@ print('-' * 40)
 print('Aula 6 - manipulando strings')
 # +[0123456789]
 # -[987654321]
-n ='Python <3'
-print(n[-5]) ## posição -5 da string
+n = 'Python <3'
+print(n[-5])  # posição -5 da string
 # fatiamento n[0:6] vai imprimir do 0 até a posição 5
 print(n[0:6])
 # fatiamento pulando caracteres
-print(n[0:8:3]) # primeiro valor é o inicio, segundo é o fim, terceiro é de quantos em quantos irá pular.
+# primeiro valor é o inicio, segundo é o fim, terceiro é de quantos em quantos irá pular.
+print(n[0:8:3])
 print('-' * 40)
 
 frase = 'O rato roeu a roupa do rei de roma'
@@ -91,12 +93,12 @@ print(nova_frase)
 for x in range(20, 10-1, -1):
     print(x)
 print('-' * 40)
-#trocando valores
+# trocando valores
 
 x = 10
 y = 'Vinicius'
 z = 15.87
-x, y , z = z, x, y
+x, y, z = z, x, y
 print(x, y, z)
 print('-' * 40)
 
