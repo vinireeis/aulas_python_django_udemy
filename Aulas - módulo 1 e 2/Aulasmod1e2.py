@@ -113,3 +113,17 @@ if not idade.isnumeric():
 de_maior = (int(idade) >= 18)
 msg = 'Pode acessar' if de_maior else 'Não pode acessar'
 print(msg)
+# def func(*args):
+#   print(args)
+
+
+def func(*args):
+    print(args)
+
+
+lista = [1, 2, 3, 4, 5]
+n1, n2, *p = lista
+print(n1, n2, n3)
+# desempacotamento de lista
+# lista = [1, 2, 3, 4, 5]
+print(*lista)
