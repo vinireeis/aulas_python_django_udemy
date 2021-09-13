@@ -117,3 +117,51 @@ def fun1(arg):
 
 var = fun()
 fun1(var)
+print('-=' * 20)
+
+print('funcoes lambda')
+''' funcoes lambda (anonimas)'''
+print('-' * 40)
+
+
+def mult(x, y):
+    return x * y
+
+
+multiplica = mult(3, 6)
+print(f'{multiplica} essa é funcao padrao, nomeada')
+print('-' * 40)
+# se trata da mesma função acima, porém no formato lambda (anonima)
+# pois não tem nome
+def a(x, y): return x * y
+
+
+b = lambda x, y: x * y
+
+
+print(f'{b(5, 10)} essa é lambda')
+print('-' * 40)
+
+n_lista = [
+    ['P1', 13],
+    ['P2', 6],
+    ['P3', 7],
+    ['P4', 50],
+    ['P5', 9]
+]
+
+
+def ordene(item):
+    return item[1]
+
+
+n_lista.sort(key=ordene)
+print(n_lista)
+
+n_lista.sort(key=ordene, reverse=True)
+print(n_lista)
+
+# com lambda
+
+n_lista.sort(key=lambda item: item[1])
+print(n_lista)
