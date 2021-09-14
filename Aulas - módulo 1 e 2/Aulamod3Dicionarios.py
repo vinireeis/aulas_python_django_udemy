@@ -83,6 +83,15 @@ lista = [
     ['c2', 2],
     ['c3', 3]
 ]
-
+print('-=' * 20)
 d10 = dict(lista)
 print(d10)
+
+d10.pop('c3')  # elimina a chave mencionada
+print(d10)
+d10.popitem()  # elimina o último elemento
+print(d10)
+
+d10.update((d1))
+print(d10)
+
