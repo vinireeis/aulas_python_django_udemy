@@ -32,19 +32,57 @@ print('valor' in d2.values())  # true
 # print(len(d1))
 
 # para ver values, keys e items(pares)
-for x in d1.keys():
+for x in d1.keys():  # acessando apenas as chaves
     print(x)
 
-for y in d1.values():
+for y in d1.values():  # acessando apenas os valores
     print(y)
 
 for z in d1.items():
     print(z)
 
-for k in d1.items():
+for k in d1.items():  # acessando chave e valor
     print(k[0], k[1])
 
-for k, v in dic.items():
-    print(k, v)
+for u, t in dic.items():  # acessando chave e valor
+    print(u, t)
 
 # desempacotando
+
+clientes = {
+    'cliente1': {
+        'nome': 'Vinicius',
+        'sobrenome': 'Reis'
+    },
+    'cliente2': {
+        'nome': 'João',
+        'sobrenome': 'Moreira',
+    },
+    'cliente3': {
+        'nome': 'Larissa',
+        'sobrenome': 'Costa'
+    }
+}
+print('-=' * 20)
+
+for clientes_k, clientes_v in clientes.items():
+    print(f' Exibindo {clientes_k}')
+    for dados_k, dados_v in clientes_v.items():
+        print(f'\t{dados_k} = {dados_v}')
+
+# fazendo uma cópia de um dicionário.
+v = d1.copy()
+v['chave1'] = 'Vinicius copy'
+print(d1)
+print(v)
+
+# convertendo para um dicionário dict()
+
+lista = [
+    ['c1', 1],
+    ['c2', 2],
+    ['c3', 3]
+]
+
+d10 = dict(lista)
+print(d10)
