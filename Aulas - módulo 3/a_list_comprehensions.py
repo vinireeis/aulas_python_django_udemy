@@ -26,3 +26,21 @@ ex6 = [v for v in l3 if v % 3 == 0 if v % 8 == 0]  # usando ifs
 print(ex6)
 ex7 = [v if v % 3 == 0 and v % 8 == 0 else 'Não é' for v in l3]  # if else
 print(ex7)
+print('-' * 50)
+
+lista = [
+    ('key', 'valor'),
+    ('key1', 'valor1')
+]
+
+d1 = {x: y for x, y in lista}  # transformando em dicionário.
+print(d1)
+
+d2 = {x: y for x, y in enumerate(range(5))}  # usando o range para fazer um dicionário
+print(d2)
+
+d3 = {x for x in range(5)}  # type é set
+print(d3)
+
+d4 = {f'chave_{x}': x**2 for x in range(1, 5+1)}  # type é set
+print(d4)
