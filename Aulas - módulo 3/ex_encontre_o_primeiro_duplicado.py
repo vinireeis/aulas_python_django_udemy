@@ -30,12 +30,12 @@ lista_de_listas_de_inteiros = [
 
 
 def encontra(lista):
-    for listas in lista_de_listas_de_inteiros:
+    for listas in lista:
         lista_duplicado, lista_posicao, cont_valor = [], [], 0
         if len(listas) == len(set(listas)):
             print('-' * 40, f'\nNão existe valor duplicado > -1')
         else:
-            for x in range(10):
+            for x in range(len(listas)):
                 valor = listas[x]
                 for i, j in enumerate(listas):
                     if valor == j and i != cont_valor and j not in lista_duplicado:
@@ -47,6 +47,7 @@ def encontra(lista):
 
 
 encontra(lista_de_listas_de_inteiros)
+encontra([[1, 2, 3, 3, 2, 1]])
 
 '''
 for listas in lista_de_listas_de_inteiros:
