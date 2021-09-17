@@ -28,6 +28,8 @@ g = gera()
 for v in g:
     print(v)
 '''
+
+
 # agora é uma função geradora
 def gera():
     for n in range(100):
@@ -45,6 +47,7 @@ for v in g:
 print(hasattr(g, '__next__'))  # true
 print(hasattr(g, '__iter__'))  # true
 
+
 # outro exemplo
 def gera1():
     var = 'Valor 1'
@@ -53,6 +56,7 @@ def gera1():
     yield var
     var = 'Valor 3'
     yield var
+
 
 g1 = gera()
 print(g1)
@@ -65,5 +69,7 @@ l2 = (x for x in range(1000))  # apenas por usar parenteses já vira um gerador
 print(type(l2))  # type generator
 
 print(sys.getsizeof(l1))
-print(sys.getsizeof(l2))  # muito menor em bytes por usar gerador mesmo se mudar o range para maior
- # ou menor só vai alterar o tamanho do consumo de memória na função que não utiliza gerador.
+print(sys.getsizeof(l2))
+# muito menor em bytes por usar gerador mesmo se mudar o range para maior# ou
+# menor só vai alterar o tamanho do consumo de memória na função que não
+# utiliza gerador.

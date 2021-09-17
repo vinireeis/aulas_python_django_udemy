@@ -1,4 +1,4 @@
-lista_a = [1, 2, 3, 4, 5, 6]
+lista_a = [10, 2, 3, 40, 5, 6]
 lista_b = [1, 2, 3, 4]
 lista_soma = []
 
