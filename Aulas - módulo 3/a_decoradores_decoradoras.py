@@ -32,19 +32,4 @@ def fala_oi():
 
 var = master1(fala_oi)
 var()
-
-
-def master2(funcao):
-    # criando uma funcao, que tem uma funcao slave e "manda a slave" executar uma terceira funcao "fala_oi"
-    def slave2():
-        print('Agora estou decorada')
-        funcao()
-    return slave2
-
-
-@master
-def fala_oi1():
-    print('Vai printar a fala_oi')
-
-
-fala_oi1()
+# @master - decorador
