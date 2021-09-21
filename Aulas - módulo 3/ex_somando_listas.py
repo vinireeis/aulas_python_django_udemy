@@ -1,3 +1,4 @@
+'''
 lista_a = [10, 2, 3, 40, 5, 6]
 lista_b = [1, 2, 3, 4]
 lista_soma = []
@@ -13,3 +14,11 @@ print(lista_soma)
 
 lista_total = [x + y for x, y in zip(lista_a, lista_b)]
 print(lista_total)
+'''
+
+
+def oi():
+    print(__name__)
+
+
+oi()

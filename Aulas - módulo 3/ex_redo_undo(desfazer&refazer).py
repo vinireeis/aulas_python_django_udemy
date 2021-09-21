@@ -16,7 +16,7 @@ while True:
                     print('\nSua lista de tarefas está vazia')
             elif resp == 3:
                 if len(tasks) <= 0:
-                    print("\nnão há nada para remover")
+                    print("\nnão há nada para desfazer")
                 else:
                     temp = [tasks[-1]]
                     tasks.remove(tasks[-1])
