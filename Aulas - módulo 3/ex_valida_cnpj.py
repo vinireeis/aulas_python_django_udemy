@@ -25,17 +25,18 @@ import re
 
 
 def format_doc(doc):
-    return re.sub(r'[^0-9]', '', doc)
+    return list(re.sub(r'[^0-9]', '', doc))
 
 
 def calculo_cnpj(doc):
-    doc = [x for x in doc]
+    #  primeiro calculo
     del doc[-2:]
     calc_1 = ['5', '4', '3', '2', '9', '8', '7', '6', '5', '4', '3', '2']
     calc_cnpj = 11 - ((sum([int(x) * int(y)
                       for x, y in zip(calc_1, doc)])) % 11)
     calc_cnpj = calc_cnpj if calc_cnpj < 10 else 0
     doc.append(str(calc_cnpj))
+    #  segundo calculo
     calc_2 = ['6', '5', '4', '3', '2', '9', '8', '7', '6', '5', '4', '3', '2']
     calc_cnpj = 11 - ((sum([int(x) * int(y)
                       for x, y in zip(calc_2, doc)])) % 11)
@@ -44,8 +45,9 @@ def calculo_cnpj(doc):
     return doc
 
 
-def valida_cnpj(cnpj_original, novo_cnpj):
-    cnpj_original = list(novo_cnpj)
+def valida_cnpj(cnpj_original):
+    cnpj_original = format_doc(cnpj_original)
+    novo_cnpj = calculo_cnpj(cnpj_original)
     if cnpj_original == novo_cnpj:
         return 'CNPJ VÁLIDO'
     else:
@@ -53,7 +55,5 @@ def valida_cnpj(cnpj_original, novo_cnpj):
 
 
 if __name__ == '__main__':
-    cnpj_original = '40.688.134/0001-61'
-    cnpj_original = format_doc(cnpj_original)
-    novo_cnpj = calculo_cnpj(cnpj_original)
-    print(valida_cnpj(cnpj_original, novo_cnpj))
+    cnpj_original = '12.544.992/0001-05'
+    print(valida_cnpj(cnpj_original))

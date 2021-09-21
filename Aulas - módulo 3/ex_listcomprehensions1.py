@@ -7,7 +7,6 @@ carrinho = [
     ('Produto6', 50.50),
     ('Produto7', 150),
     ('Produto8', 10),
-
 ]
 
 l1 = sum([float(x[1]) for x in carrinho])
