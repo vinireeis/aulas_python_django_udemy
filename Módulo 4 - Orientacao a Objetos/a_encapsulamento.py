@@ -37,5 +37,5 @@ bd.__dados = 'Outra coisa'
 # e o atributo original será renomeado para _BaseDeDados__dados (_NomeDaClasse__nome_atributo)
 print(bd.__dados)
 print(bd._BaseDeDados__dados)
-# bd.lista_clientes() agora já não funciona mais por ter alterado a estrutura da classe e
-# o método não estar preparado para isso
+# bd.lista_clientes() agora já não funciona mais por ter alterado a estrutura..
+#  da classe e o método não estar preparado para isso
