@@ -1,5 +1,5 @@
 from carrinho import Produto, CarrinhoDeCompras
-from carrinho import Endereco, Cliente
+from carrinho import Cliente
 
 produto1 = Produto('Camiseta', 100)
 produto2 = Produto('Iphone', 5300)

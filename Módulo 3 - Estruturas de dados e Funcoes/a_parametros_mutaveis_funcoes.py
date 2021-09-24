@@ -11,6 +11,8 @@ def lista_clientes(clientes_iteravel, lista=None):
 clientes1 = lista_clientes(['João', 'Maria', 'Eduardo'])
 clientes2 = lista_clientes(['Marcos', 'Jonas', 'Zico'])
 clientes3 = lista_clientes(['José'])
+c4 = lista_clientes([])
 print(clientes1)
 print(clientes2)
 print(clientes3)
+print(c4)

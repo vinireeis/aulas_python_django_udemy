@@ -1,14 +1,16 @@
 from datetime import datetime
 from random import randint
 
+
 class Pessoa:
-    ano_atual = int(datetime.strftime(datetime.now(),'%Y'))
+    ano_atual = int(datetime.strftime(datetime.now(), '%Y'))
 
     def __init__(self, nome, idade, comendo=False, falando=False):
         self.nome = nome
         self.idade = idade
         self.comendo = comendo
         self.falando = falando
+        self.nomeclasse = self.__class__.__name__
 
     def comer(self, alimento):
         if self.comendo:
@@ -57,3 +59,36 @@ class Pessoa:
     def gera_id():
         rand = randint(10000, 99999)
         return rand
+
+
+"""utiliando herança"""
+
+
+class Cliente(Pessoa):
+    def comprar(self):
+        print(f'{self.nomeclasse} comprando...')
+
+
+class Aluno(Pessoa):
+    def estudar(self):
+        print(f'{self.nomeclasse} estudando...')
+
+
+class ClienteVip(Cliente):
+    def __init__(self, nome, idade, sobrenome):
+        super().__init__(self, nome, idade)
+        self.sobrenome = sobrenome  # sobrescrevendo com um atributo específico
+
+
+"""
+    def falar(self, assunto):
+        print('Falando outra coisa qualquer')  # sobrescrevendo o método
+        return super().falar(assunto)  # chamando o falar da superclasse Pessoa
+
+
+
+Cliente é uma herança simples, pois herda apenas de Pessoa.
+ClienteVIP é uma herança múltipla, pois Cliente VIP herda de Cliente que herda
+de Pessoa, ou seja, ClienteVip terá todas as definições da classe
+Pessoa e Cliente
+"""
