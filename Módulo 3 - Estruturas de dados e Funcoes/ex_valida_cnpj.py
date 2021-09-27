@@ -45,15 +45,26 @@ def calculo_cnpj(doc):
     return doc
 
 
+def eh_sequencia(cnpj):
+    sequencia = cnpj[0] * len(cnpj)
+    if sequencia == cnpj:
+        return True
+    else:
+        return False
+
+
 def valida_cnpj(cnpj_original):
+    sequencia = eh_sequencia(cnpj_original)
+    if sequencia:
+        return print('CNPJ informálido inválido, pois é uma sequencia')
     novo_cnpj = format_doc(cnpj_original)
     novo_cnpj = calculo_cnpj(novo_cnpj)
     cnpj_original = format_doc(cnpj_original)
     if cnpj_original == novo_cnpj:
-        return 'CNPJ VÁLIDO'
-    return 'CNPJ INVÁLIDO'
+        return print('CNPJ VÁLIDO')
+    return print('CNPJ INVÁLIDO')
 
 
 if __name__ == '__main__':
-    cnpj_original = '04.252.011/0001-10'
-    print(valida_cnpj(cnpj_original))
+    cnpj_original = '11111111111111'
+    valida_cnpj(cnpj_original)
