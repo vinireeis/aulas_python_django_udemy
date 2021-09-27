@@ -30,24 +30,18 @@ def format_doc(doc):
 
 def calculo_cnpj(doc):
     #  primeiro calculo
-    # print(doc)
     del doc[-2:]
-    # print(doc)
     calc_1 = ['5', '4', '3', '2', '9', '8', '7', '6', '5', '4', '3', '2']
     calc_cnpj = 11 - ((sum([int(x) * int(y)
                       for x, y in zip(calc_1, doc)])) % 11)
     calc_cnpj = calc_cnpj if calc_cnpj < 10 else 0
-    # print(calc_cnpj)
     doc.append(str(calc_cnpj))
-    # print(doc)
     #  segundo calculo
     calc_2 = ['6', '5', '4', '3', '2', '9', '8', '7', '6', '5', '4', '3', '2']
     calc_cnpj = 11 - ((sum([int(x) * int(y)
                       for x, y in zip(calc_2, doc)])) % 11)
     calc_cnpj = calc_cnpj if calc_cnpj < 10 else 0
     doc.append(str(calc_cnpj))
-    # print(calc_cnpj)
-    # print(doc)
     return doc
 
 
