@@ -10,6 +10,9 @@ cursor.execute('CREATE TABLE IF NOT EXISTS clientes ('
                ')')
 
 cursor.execute('INSERT INTO clientes (nome, peso) VALUES ("Vinicius", 77.5)')
+cursor.execute(
+    'INSERT INTO clientes (nome, peso) VALUES (?, ?)', ('Larissa', 50))
+# segunda forma previe sql injection
 conexao.commit()
 cursor.execute('SELECT * FROM clientes')
 
