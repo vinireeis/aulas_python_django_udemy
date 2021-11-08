@@ -1,12 +1,15 @@
 from django.shortcuts import render, get_object_or_404, get_list_or_404
 from .models import Contato
 from django.http import Http404
+from django.core.paginator import Paginator
 
 
 def index(request):
-    contatos = Contato.objects.all()
-
-    return render(request, 'contatos/index.html', {'contatos': contatos})
+    contatos = Contato.objects.order_by('-id').filter(publicar=True)
+    paginator = Paginator(contatos, 3)
+    page = request.GET.get('page')
+    contacts = paginator.get_page(page)
+    return render(request, 'contatos/index.html', {'contatos': contacts})
 
 
 # def ver_contato(request, id_contato):
@@ -24,3 +27,11 @@ def ver_contato(request, id_contato):
     return render(request, 'contatos/ver_contato.html', {
         'contato': contato
         })
+
+
+def busca(request):
+    contatos = Contato.objects.order_by('-id').filter(publicar=True)
+    paginator = Paginator(contatos, 3)
+    page = request.GET.get('page')
+    contacts = paginator.get_page(page)
+    return render(request, 'contatos/busca.html', {'contatos': contacts})
