@@ -39,9 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'contatos.apps.ContatosConfig',
-    'django_adminlte3',
-    'adminlte3',
-    'adminlte3_theme',
 ]
 
 MIDDLEWARE = [
