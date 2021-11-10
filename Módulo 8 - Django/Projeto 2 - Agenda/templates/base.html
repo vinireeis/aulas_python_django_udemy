@@ -4,7 +4,7 @@
 
 <head>
 {% include 'partials/_head.html' %}
-<title>{% url 'index' %}Agenda</title>
+<title>Agenda</title>
 </head>
 
 <body>
@@ -23,14 +23,13 @@
                     type="search" value="{{ request.GET.termo }}"
                     id="search-input"
                     placeholder="Digite sua pesquisa"
-                    name="termo">
+                    name="termo"> 
+                {% include 'partials/_messages.html' %} 
             </div>
           </div>
         </form>
-
         {% block conteudo %}
         {% endblock %}
-
       </div>
     </div>
   </div>
