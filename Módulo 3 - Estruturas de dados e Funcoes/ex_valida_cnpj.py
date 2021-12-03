@@ -56,7 +56,7 @@ def eh_sequencia(cnpj):
 def valida_cnpj(cnpj_original):
     sequencia = eh_sequencia(cnpj_original)
     if sequencia:
-        return print('CNPJ informálido inválido, pois é uma sequencia')
+        return print('CNPJ informado inválido, pois é uma sequencia')
     novo_cnpj = format_doc(cnpj_original)
     novo_cnpj = calculo_cnpj(novo_cnpj)
     cnpj_original = format_doc(cnpj_original)
